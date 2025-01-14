@@ -1,10 +1,10 @@
-Apple apple1;
+Missile missale1;
 
 
 void setup(){
   size(600, 600);
   
-  apple1 = new Apple(100, 200);
+  missile1 = new Missile(100, 200);
   
 }
 
@@ -12,6 +12,6 @@ void setup(){
 void draw(){
   background(100);
   
-  apple1.update();
+  missile1.update();
   
 }
