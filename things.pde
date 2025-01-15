@@ -5,6 +5,7 @@ Timed timed1;
 plan plan1;
 Eye eye1;
 Black_hole bhole1;
+Square square1;
 
 color bg_col = color(150);
 
@@ -19,6 +20,7 @@ void setup(){
   plan1 = new plan(200, 100);
   eye1 = new Eye(width/2, height/2);
   bhole1 = new Black_hole(300, 300);
+  square1 = new Square(400, 500);
 }
 
 
@@ -32,5 +34,6 @@ void draw(){
   ball1.update();
   timed1.update();
   plan1.update();
+  square1.update();
   
 }
