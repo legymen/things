@@ -25,19 +25,25 @@ class Missile {
     for(int i = MList.size()-1;i>=0;i--){
     MList.get(i).travel();
     MList.get(i).render();
+    MList.get(i).fade();
     
     }
+    println(MList.size());
   }
   
   void populate(){
-    if(MList.size()<60){
+    if(MList.size()<512){
     MList.add(new Missile(new PVector(-50,height+50),new PVector(2,-2),new PVector(random(-0.01,0.01),random(-0.01,0.01))));
-    } else if (tick>750){
-      tick = 0;
-      MList.clear();
     }
-    tick++;
-    
+  }
+  
+  void fade(){
+    this.tick++;
+    if( this.tick > 150){
+      MList.remove(this);
+    }
+  
+  
   }
   
   
@@ -49,7 +55,7 @@ class Missile {
   }
   
   void render(){
-    float theta = vel.heading()+PI/2;
+    float theta = vel.heading()-PI/2;
     
     pushMatrix();
     translate(pos.x,pos.y);
@@ -59,7 +65,7 @@ class Missile {
     fill(255,2,2,50);
     strokeWeight(2);
     
-    triangle(0,0,-15,60,15,60);
+    triangle(0,0,-10,40,10,40);
     
     popMatrix();
     
