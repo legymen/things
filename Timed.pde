@@ -32,10 +32,10 @@ class Timed {
       Timer += 1000;
     }
 
-    if (xpos > 595 || xpos < 5) {
+    if (xpos > width - 5 || xpos < 5) {
       xspeed = xspeed * -1;
     }
-    if (ypos > 595 || ypos < 5) {
+    if (ypos > height - 5 || ypos < 5) {
       yspeed = yspeed * -1;
       Timer += 1000;
     }
