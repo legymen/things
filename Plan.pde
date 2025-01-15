@@ -1,17 +1,3 @@
-plan plan;
-
-void setup() {
-  size(700, 700);
-
- plan = new plan(width/2,height/2);
-}
-
-void draw() {
-  background(105);
-      plan.update();
-    
-}
-
 class plan {
   PImage plan;
   PVector pos;
