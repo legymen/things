@@ -18,7 +18,7 @@ class Wheel{
   rotate(angle2);
   strokeWeight(7.5);
   stroke(80, 57, 10);
-  fill(100);
+  fill(bg_col);
   ellipse(0, 0, 100, 100);
   stroke(0);
   fill(0);
