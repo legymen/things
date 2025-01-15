@@ -26,7 +26,7 @@ class Black_hole {
 
   void display() {
     fill (0);
-    circle(xPos, yPos, 60);
+    circle(xPos, yPos, 200);
   }
 
 
