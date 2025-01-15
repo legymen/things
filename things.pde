@@ -19,7 +19,7 @@ void setup(){
 
 
 void draw(){
-  background(160);
+  background(bg_col);
   
   missile1.update();
   wheel1.update();
