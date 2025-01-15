@@ -18,19 +18,19 @@ void setup(){
   timed1 = new Timed(200, 100);
   plan1 = new plan(200, 100);
   eye1 = new Eye(width/2, height/2);
-  bhole1 = Black_hole(300, 300);
+  bhole1 = new Black_hole(300, 300);
 }
 
 
 void draw(){
   background(bg_col);
   
+  bhole1.update();
   eye1.update();
   missile1.update();
   wheel1.update();
   ball1.update();
   timed1.update();
   plan1.update();
-  bhole1.update();
   
 }
